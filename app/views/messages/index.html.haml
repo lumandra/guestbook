@@ -2,7 +2,9 @@
 - @messages.each do |message|
   .panel.panel-default
     .panel-heading
-      %h4= message.name
+      %h4.title= message.name
+      =link_to fa_icon("facebook 2x", class: "pull-right"),
+               "https://www.facebook.com/share.php?u=#{request.base_url}/messages/#{message.id}", class: "pull-right"
     .panel-body= message.message
 
 .col-md-6.col-md-offset-3
