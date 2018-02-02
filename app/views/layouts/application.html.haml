@@ -6,7 +6,7 @@
     = csrf_meta_tags
     = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
     = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
-  %body
+  %body{data:{ page:"#{controller_name.camelize + action_name.camelize}", controller:"#{body_controller}" } }
     = render partial: 'partials/full_nav'
     .container
       = yield
