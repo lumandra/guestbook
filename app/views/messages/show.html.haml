@@ -1,16 +1,6 @@
-%p#notice= notice
-%p
-  %strong Name:
-  = @message.name
-%p
-  %strong Email:
-  = @message.email
-%p
-  %strong Message:
-  = @message.message
-%p
-  %strong State:
-  = @message.state
-= link_to 'Edit', edit_message_path(@message)
-|
-= link_to 'Back', messages_path
+.panel.panel-default
+  .panel-heading
+    %h4= @message.name
+  .panel-body= @message.message
+
+=link_to 'View All', messages_path, class: 'btn btn-default'

@@ -1,8 +1,7 @@
 =simple_form_for message do |form|
-  .message-form
-    = form.input :name, id: :message_name, class: 'form-control', input_html: { class: 'validate', data:{ length: 3 } }
-    = form.input :email, id: :message_email, class: 'form-control validates', input_html: { class: 'validate' }
-    = form.input :message, id: :message_message, class: 'form-control validates', input_html: { class: 'validate', data:{ length: 5 } }
+  = form.input :name, id: :message_name, class: 'form-control', input_html: { class: 'validate', data:{ length: 3 } }
+  = form.input :email, id: :message_email, class: 'form-control validates', input_html: { class: 'validate' }
+  = form.input :message, id: :message_message, class: 'form-control validates', input_html: { class: 'validate', rows: 7, data:{ length: 5 } }
 
   .action
     = form.submit 'Create', class:'btn btn-primary create-msg-btn', disabled: true
